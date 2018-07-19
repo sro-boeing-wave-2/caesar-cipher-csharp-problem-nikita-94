@@ -13,8 +13,8 @@ namespace CaesarCipher
         private static char RotateChar(char ch, int shiftKey)
         {
             if (!char.IsLetter(ch)) return ch;
-            char _base = char.IsUpper(ch) ? 'A' : 'a';
-            return (char)((ch - _base + shiftKey) % 26 + _base);
+            char val = char.IsUpper(ch) ? 'A' : 'a';
+            return (char)((ch - val + shiftKey) % 26 + val);
         }
     }
 }
